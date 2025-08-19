@@ -1,7 +1,7 @@
 package com.javid.busReservation.dao;
+
 import com.javid.busReservation.util.DbConnection;
 import com.javid.busReservation.model.Booking;
-
 
 import java.util.Date;
 import java.sql.*;
@@ -27,7 +27,7 @@ public class BookingDAO {
         Connection con= DbConnection.getConnection();
         PreparedStatement pst=con.prepareStatement(query);
 
-        pst.setString(1,booking.Passengername);
+        pst.setString(1,booking.passengerName);
         pst.setInt(2,booking.busNo);
         java.sql.Date sqldate=new java.sql.Date(booking.date.getTime());
         pst.setDate(3,sqldate);

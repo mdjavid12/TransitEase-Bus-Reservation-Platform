@@ -1,7 +1,5 @@
 package com.javid.busReservation.model;
-
-import com.javid.busReservation.dao.BookingDAO;
-import com.javid.busReservation.dao.BusDAO;
+import com.javid.busReservation.dao.*;
 
 import java.util.*;
 import java.sql.SQLException;
@@ -10,26 +8,26 @@ import java.text.SimpleDateFormat;
 
 public class Booking {
 
-    public String Passengername;
+    public String passengerName;
     public int busNo;
-    public Date date;
+    public  Date date;
 
 
-    public Booking() {
-        Scanner javi = new Scanner(System.in);
-        System.out.println("Enter Passenger Name: ");
-        Passengername = javi.next();
 
-        System.out.println("Enter Bus number: ");
-        busNo = javi.nextInt();
+    public Booking(String passengerName, int busNo, String dateStr) {
+        this.passengerName = passengerName;
+        this.busNo = busNo;
 
-        System.out.println("Enter the journey date(dd-MM-yyy): ");
-        String dateinput = javi.next();
+        setDate(dateStr);
+
+    }
+
+    public  void setDate(String dateStr) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         try {
-            date = dateFormat.parse(dateinput);
+            this.date = dateFormat.parse(dateStr);
         } catch (ParseException e) {
-            throw new RuntimeException(e);
+            throw new IllegalArgumentException("Invalid date format. Use dd-MM-yyyy");
         }
     }
 
@@ -43,6 +41,7 @@ public class Booking {
 
         return booked < capacity;  //return booked<capacity?true:false;
     }
+
 }
 
 

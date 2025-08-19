@@ -1,7 +1,7 @@
 package com.javid.busReservation.model;
 
 public class Bus {
-    private int BusNo;
+    private final int BusNo;
     private boolean Ac;
     private int Capacity;
 
@@ -28,9 +28,6 @@ public class Bus {
         Capacity =seat;
     }
 
-    public void DisplayBusInfo(){
-        System.out.println("Busno:"+ BusNo +" Ac:"+Ac+" TotalCapacity:"+ Capacity);
-    }
 
 }
 

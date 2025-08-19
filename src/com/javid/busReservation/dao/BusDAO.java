@@ -15,12 +15,13 @@ public class BusDAO {
         while(rs.next()) {
             System.out.println("Bus No: " + rs.getInt(1));
             if(rs.getInt(2)==0)
-                System.out.println("AC: no ");
+                System.out.println("Type: Non-AC ");
             else
-                System.out.println("AC: yes ");
-            System.out.println("Capacity: "+ rs.getInt(3));
+                System.out.println("Type: AC ");
+            System.out.println("Capacity: "+ rs.getInt(3)+"\n");
         }
-        System.out.println("**********************************");
+        System.out.println("**********************************\n");
+
     }
 
     public int getCapacity(int id) throws SQLException{
