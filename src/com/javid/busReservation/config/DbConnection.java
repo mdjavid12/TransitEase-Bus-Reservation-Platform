@@ -1,4 +1,4 @@
-package com.javid.busReservation.util;
+package com.javid.busReservation.config;
 
 import java.sql.*;
 

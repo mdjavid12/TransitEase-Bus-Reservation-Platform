@@ -1,6 +1,6 @@
 package com.javid.busReservation.dao;
 
-import com.javid.busReservation.util.DbConnection;
+import com.javid.busReservation.config.DbConnection;
 
 import java.sql.*;
 
