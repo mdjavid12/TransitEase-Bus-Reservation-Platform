@@ -1,8 +1,6 @@
 package com.javid.busReservation.dao;
-
 import com.javid.busReservation.config.DbConnection;
 import com.javid.busReservation.model.Booking;
-
 import java.util.Date;
 import java.sql.*;
 

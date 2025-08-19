@@ -1,7 +1,5 @@
 package com.javid.busReservation.dao;
-
 import com.javid.busReservation.config.DbConnection;
-
 import java.sql.*;
 
 public class BusDAO {
@@ -21,7 +19,6 @@ public class BusDAO {
             System.out.println("Capacity: "+ rs.getInt(3)+"\n");
         }
         System.out.println("**********************************\n");
-
     }
 
     public int getCapacity(int id) throws SQLException{

@@ -10,25 +10,6 @@ public class Bus {
         this.Ac=Ac;
         this.Capacity = Capacity;
     }
-
-    public int getBusNo(){
-        return BusNo;
-    }
-
-    public boolean isAc(){
-        return Ac;
-    }
-    public int getCapacity(){
-        return Capacity;
-    }
-    public void setAc(boolean ac){
-        Ac=ac;
-    }
-    public void setCapacity(int seat){
-        Capacity =seat;
-    }
-
-
 }
 
 
